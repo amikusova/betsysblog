@@ -1,17 +1,15 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Betsy's blog</title>
-    </head>
-    <body>
-        <div>
-            {% for post in posts %}
-            <article>
-                <time>published: {{ post.published_date }}</time>
-                <h2><a href="">{{ post.title }}</a></h2>
-                <p>{{ post.text|linebreaksbr }}</p>
-            </article>
-        {% endfor %}
-        </div>
+    <header>
+        <h1><a href="/">Betsy's Blog</a></h1>
+    </header>
+    
+    {% for post in posts %}
+        <article>
+            <time>published: {{ post.published_date }}</time>
+            <h2><a href="">{{ post.title }}</a></h2>
+            <p>{{ post.text|linebreaksbr }}</p>
+        </article>
+    {% endfor %}
     </body>
 </html>

@@ -11,10 +11,12 @@
     <body>
         <header class="page-header">
           <div class="container">
+            {% if user.is_authenticated %}
             <a href="{% url 'post_new' %}" class="top-menu">
+            
                 <span class="glyphicon glyphicon-pencil"></span></p>
             </a>
-           
+            {% endif %}
               <h1><a href="/">Betsysblog</a></h1>
           </div>
         </header>

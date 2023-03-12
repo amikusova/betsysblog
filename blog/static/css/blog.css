@@ -1,5 +1,5 @@
 .page-header {
-    background-color: #C25100;
+    background-color: cadetblue;
     margin-top: 0;
     margin-bottom: 40px;
     padding: 20px 20px 20px 40px;
@@ -18,7 +18,7 @@ h1,
 h2,
 h3,
 h4 {
-    font-family: 'Lobster', cursive;
+    font-family: 'Lobster',cursive;
 }
 
 .date {
@@ -59,12 +59,12 @@ h4 {
 
 .btn-secondary,
 .btn-secondary:visited {
-    color: #C25100;
+    color: cadetblue;
     background: none;
-    border-color: #C25100;
+    border-color:cadetblue;
 }
 
 .btn-secondary:hover {
     color: #FFFFFF;
-    background-color: #C25100;
+    background-color: cadetblue;
 }

@@ -11,7 +11,7 @@ venv/
 
 
 # Static folder at project root
-
+/static/
 
 # macOS
 ._*

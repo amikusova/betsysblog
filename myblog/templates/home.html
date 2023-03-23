@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+
+
+<h1>Blog1</h1>
+<ul>
+{% for post in object_list %}
+     <li><a href="{% url 'article-detail' post.pk %}">{{ post.title }}</a> - {{ post.author.first_name }}
+        {{ post.author.last_name}}- {{ post.publication_date }} <small>
+            <br/><br/>
+{%if post.image %}
+     <img src=" {{ post.image.url }}"      >
+{% endif %}
+     <br/><br/>
+            {% if user.is_authenticated %}    
+            <a href="{% url 'update_post' post.pk %}">(editovať)</a>
+            <a href="{% url 'delete_post' post.pk %}">(vymazať)</a>
+
+        {% endif %}    
+
+
+
+
+
+        </small><br/>
+        {{ post.body |slice:":250"|safe }}</li>
+    {% endfor%}
+</ul>
+
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block title %}Vymazať článok{% endblock %}
+
+{% block content %}
+
+
+
+{% if user.is_authenticated %}
+<h1>Vymazať článok</h1>
+<br><br/>
+<h3>Vymazať: {{ post.title }}</h3>
+<br/>
+<div class="form-group">
+
+<form method="POST">
+   {% csrf_token %}
+   <strong>Vymazať?</strong><br/>
+   {{ form.as_p }}
+
+   <button class="btn btn-secondary">Vymazať</button><br/><br/>
+   
+
+</div>
+{% else %}
+
+Nie si prihlásený.
+
+{% endif %}
+
+
+{% endblock %}

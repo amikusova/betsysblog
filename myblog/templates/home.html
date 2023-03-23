@@ -5,7 +5,7 @@
 
 
 
-<h1>Blog1</h1>
+<h1>Denník o všetkom</h1>
 <ul>
 {% for post in object_list %}
      <li><a href="{% url 'article-detail' post.pk %}">{{ post.title }}</a> - {{ post.author.first_name }}
